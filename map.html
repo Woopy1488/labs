@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>RGZ</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    html,
+    body,
+    header,
+    .carousel{
+      height: 100vh;
+    }
+    @media (min-width: 800px) and (max-width:850px){
+    html,
+    body,
+    header,
+    .carousel{
+      height: 100vh;
+    }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+      <div class="container">
+        <a href="#" class="navbar-brand waves-effect">
+          <strong class="black-text">Laba</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="collapse navbar-collapse" id="navbarContent"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a href="index.html" class="nav-link waves-effect">Home</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a href="" class="nav-link waves-effect">
+                <span class="badge red z-depth-1 mr-1">0</span>
+                <i class="fa fa-shopping-cart"></i>
+                <span class="clearfix d-none d-sm-inline-block">Cart</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+
+
+
+  <main class="mt-5 pt-4">
+    <div class="text-center mx-5 wow fadeIn">
+      <h1 class="mb-4">
+        <strong>LOCATION</strong>
+      </h1>
+    </div>
+  </main>
+
+  <div id="map"></div>
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+  <div class="pt-4">
+    <a href="https://www.nstu.ru" role="button" class="btn btn-outline-white">NSTU</a>
+  </div>
+  <div class="footer-copyright py-3">
+    Keygler Egor NSTU FBB-93
+  </div>
+</footer>
+
+<script> function initMap() {
+  // The location of Uluru
+  const uluru = { lat: 54.9863359, lng: 82.9041077 };
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: uluru,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+}
+</script>
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAGouPbrh3Un6TEh-JRfgzJKS2eePhPKM&callback=initMap&v=weekly">
+</script>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+
+</body>
+</html>
